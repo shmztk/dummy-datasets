@@ -48,13 +48,17 @@ class ConnectorClient:
             # ===========================
 
             # response = self._request_data(self.config.api_base_url, params=params)
+            url = "https://oasis-open.github.io/cti-documentation/examples/example_json/apt1.json"
+            response = self._request_data(url, params=params)
+            json_data = response.json()
+            return json_data["objects"] if "objects" in json_data else []
 
             # return response.json()
             # ===========================
             # === Add your code above ===
             # ===========================
 
-            raise NotImplementedError
+            #raise NotImplementedError
 
         except Exception as err:
             self.helper.connector_logger.error(err)

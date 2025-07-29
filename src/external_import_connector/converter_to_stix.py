@@ -26,17 +26,11 @@ class ConverterToStix:
         :return: Author in Stix2 object
         """
         author = stix2.Identity(
-            id=Identity.generate_id(name="Source Name", identity_class="organization"),
-            name="Source Name",
+            id=Identity.generate_id(name="Dummy Data", identity_class="organization"),
+            name="Dummy Data",
             identity_class="organization",
-            description="DESCRIPTION",
-            external_references=[
-                stix2.ExternalReference(
-                    source_name="External Source",
-                    url="CHANGEME",
-                    description="DESCRIPTION",
-                )
-            ],
+            description="Dummy Data provider",
+            #external_references=[ stix2.ExternalReference(source_name="External Source", url="CHANGEME", description="DESCRIPTION",) ],
         )
         return author
 

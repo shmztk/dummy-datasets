@@ -71,8 +71,9 @@ class ConnectorDummyDatasets:
 
         # Convert into STIX2 object and add it on a list
         for entity in entities:
-            entity_to_stix = self.converter_to_stix.create_obs(entity["value"])
-            stix_objects.append(entity_to_stix)
+            #entity_to_stix = self.converter_to_stix.create_obs(entity["value"])
+            #stix_objects.append(entity_to_stix)
+            stix_objects.append(entity)
 
         # ===========================
         # === Add your code above ===
